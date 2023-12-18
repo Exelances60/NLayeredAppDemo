@@ -96,17 +96,25 @@ namespace Northwind.WebFormsUI
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            _productService.Add(new Product
+            try
             {
-                CategoryID = Convert.ToInt32(cbxCategoryAdd.SelectedValue),
-                ProductName = tbxProductName.Text,
-                QuantityPerUnit = tbxQuantityPerUnit.Text,
-                UnitPrice = Convert.ToDecimal(tbxUnitPrice.Text),
-                UnitsInStock = Convert.ToInt16(tbxStock.Text),
-            });
-            MessageBox.Show("Product Added!");
-            LoadProducts();
-            clearTextBoxAdd("add");
+                _productService.Add(new Product
+                {
+                    CategoryID = Convert.ToInt32(cbxCategoryAdd.SelectedValue),
+                    ProductName = tbxProductName.Text,
+                    QuantityPerUnit = tbxQuantityPerUnit.Text,
+                    UnitPrice = Convert.ToDecimal(tbxUnitPrice.Text),
+                    UnitsInStock = Convert.ToInt16(tbxStock.Text),
+                });
+                MessageBox.Show("Product Added!");
+                LoadProducts();
+                clearTextBoxAdd("add");
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message);
+            }
+      
         }
         private void dgwProduct_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -165,5 +173,6 @@ namespace Northwind.WebFormsUI
                 MessageBox.Show(exception.Message);
             }
         }
+
     }
 }

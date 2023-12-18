@@ -1,4 +1,7 @@
-﻿using Northwind.Business.Abstract;
+﻿using FluentValidation;
+using Northwind.Business.Abstract;
+using Northwind.Business.Utility;
+using Northwind.Business.ValidationRules.FluentValidation;
 using Northwind.DataAccess.Abstract;
 using Northwind.DataAccess.Concreate.EntityFramework;
 using Northwind.Entities.Concreate;
@@ -23,6 +26,9 @@ namespace Northwind.Business.Concreate
  
         public void Add(Product product)
         {
+            ProductValidator validations = new ProductValidator();
+            ValidationTools.Validate(validations, product);
+
             _productDal.Add(product);
         }
       

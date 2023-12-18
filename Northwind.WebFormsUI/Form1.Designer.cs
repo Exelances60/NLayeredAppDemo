@@ -48,6 +48,7 @@
             this.lblProductName = new System.Windows.Forms.Label();
             this.tbxProductName = new System.Windows.Forms.TextBox();
             this.gbxProductUpdate = new System.Windows.Forms.GroupBox();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.cbxCategoryUpdate = new System.Windows.Forms.ComboBox();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.lblUpdateQuantityPerUnit = new System.Windows.Forms.Label();
@@ -59,7 +60,6 @@
             this.lblUpdateCategory = new System.Windows.Forms.Label();
             this.lblUpdateName = new System.Windows.Forms.Label();
             this.tbxUpdateName = new System.Windows.Forms.TextBox();
-            this.btnDelete = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgwProduct)).BeginInit();
             this.gbxSearch.SuspendLayout();
             this.gbxCategory.SuspendLayout();
@@ -268,6 +268,20 @@
             this.gbxProductUpdate.TabStop = false;
             this.gbxProductUpdate.Text = "Ürün Güncelle";
             // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.Red;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnDelete.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnDelete.Location = new System.Drawing.Point(259, 95);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.TabIndex = 14;
+            this.btnDelete.Text = "Ürün Sil";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // cbxCategoryUpdate
             // 
             this.cbxCategoryUpdate.FormattingEnabled = true;
@@ -359,20 +373,6 @@
             this.tbxUpdateName.Name = "tbxUpdateName";
             this.tbxUpdateName.Size = new System.Drawing.Size(163, 20);
             this.tbxUpdateName.TabIndex = 2;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.Red;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnDelete.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnDelete.Location = new System.Drawing.Point(259, 95);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 23);
-            this.btnDelete.TabIndex = 14;
-            this.btnDelete.Text = "Ürün Sil";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // Form1
             // 

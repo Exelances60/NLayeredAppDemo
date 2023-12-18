@@ -55,6 +55,7 @@
     <Compile Include="Concreate\CategoryManager.cs" />
     <Compile Include="Concreate\ProductManger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility\ValidationTools.cs" />
     <Compile Include="ValidationRules\FluentValidation\ProductValidator.cs" />
   </ItemGroup>
   <ItemGroup>

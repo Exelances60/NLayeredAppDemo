@@ -12,7 +12,7 @@ namespace Northwind.Business.ValidationRules.FluentValidation
     {
         public ProductValidator()
         {
-            RuleFor(p => p.ProductName).NotEmpty();
+            RuleFor(p => p.ProductName).NotEmpty().WithMessage("Ürün ismi boş olamaz");
             RuleFor(p=> p.CategoryID).NotEmpty();
             RuleFor(p => p.UnitPrice).NotEmpty();
             RuleFor (p => p.QuantityPerUnit).NotEmpty();
